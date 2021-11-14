@@ -11,7 +11,7 @@ export default class App extends Component{
     charc: 0,
     }
   }
-analyzeWord = () => {
+analyze = () => {
    let input = this.state.input;
    let cons = 0;
    let vowel=0;
@@ -42,9 +42,9 @@ for (let i=0; i <charc ;i++ ) {
 
        <Text style={Styles.Header}> Word Analyzer</Text>
        <TextInput style={Styles.input} onChangeText={(input) => this.setState({input})}  placeholder="Type your word here" />
-      <Button  onPress={this.analyzeWord}  title="Analyze"  color="#00A36C" />
+      <Button  onPress={this.analyze}  title="Analyze"  color="#00A36C" />
       <Text></Text>
-      <Text style={Styles.Text} >Words                               :  {this.state.input}</Text>
+      <Text style={Styles.Text} >Word                               :  {this.state.input}</Text>
        <Text style={Styles.Text} >No. of Consonants         :  {this.state.cons}</Text>
        <Text style={Styles.Text} >No. of Vowels                 :  {this.state.vowel}</Text>
        <Text style={Styles.Text} >No. of Characters           :  {this.state.charc}</Text>
